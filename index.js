@@ -14,8 +14,12 @@ console.log(positives);
 const sumOfPositives = positives.reduce((total, element) => {
   return total + element;
 });
-console.log(sumOfPositives);
+console.log(sumOfPositives, "line17 - dadebiti rixevbis jami");
 //yvelaferma kargad chaira :)
+
+
+
+
 
 //=========meore amocana============================================
 // cota ocnebebshi wavedi...
@@ -34,7 +38,8 @@ let stringsArray = [
   "bros",
 ];
 
-// ragaca dzalian hardcodedia mara sxvanairad ar gamomivida
+
+//es xerxi cota hardcoded gamovida
 
 let reducedDreams = stringsArray.reduce(
   (total, current) => {
@@ -58,7 +63,41 @@ let reducedDreams = stringsArray.reduce(
   }
 );
 
-console.log(reducedDreams);
+console.log(reducedDreams, " meore amocana - 64line ");
+
+//funcqcia romelic parametrad igebs masivs da values romelsac vamowmebt gameorebaze da abrunebs tu ramdenjer meordeba es value masivshi
+
+const countRepetition = (array, value) => {
+  return array.reduce((total, item) => {
+    return value === item ? total + 1 : total;
+  }, 0);
+};
+const getRepetitionNum = countRepetition(stringsArray, "will");
+console.log(getRepetitionNum, "---meroe amocana function xerxi  - line 74");
+
+//
+
+
+const tryingSomething = stringsArray.reduce((total, val, i, arr) => {
+
+
+  //ratomgac es masivi carielia problema memgoni valueshia magram ver gavige
+  let checkIf_Repetition_Exist = arr.filter((item) => {
+    item === val;
+  });
+
+  
+
+  //tu checkIf_Repetition_Exist.length 1 ze metia nishnavs rom araishi gvaqvs gameoreba
+  if (checkIf_Repetition_Exist.length > 1) {
+    return checkIf_Repetition_Exist[1]
+      ? (total.checkIf_Repetition_Exist[1] = checkIf_Repetition_Exist.length)
+      : total;
+  }
+  return total;
+  //ragacas arasworad vaketeb magram ver vxvdebi
+}, {});
+console.log(tryingSomething, "problem");
 
 //js class amocana====================================================
 
@@ -75,7 +114,8 @@ class Car {
     this.check_motion();
   }
   brake(speed) {
-    this.speed -= speed;
+    this.speed > speed ? (this.speed -= speed) : (this.speed = 0);
+
     this.check_motion();
   }
   emergency_brake() {
@@ -92,12 +132,13 @@ class Car {
     return carStatus;
   }
 }
-const car = new Car("mersedes", "cls");
+
+const car = new Car("eleanor", "1969");
 
 car.accelerate(10);
-car.brake(5);
+
 console.log(car.status());
-car.emergency_brake();
+car.brake(10);
 console.log(car.status());
 
 // async js amocana=============================================
@@ -120,6 +161,4 @@ addasync()
   .then((value) => console.log(value))
   .catch((err) => console.log(err));
 
-
-
-  //meore amocana ar momwons ubralod dro ar maqvs ;(   ....
+//memgoni sworad gamovida ertaderti classhi meechveba....

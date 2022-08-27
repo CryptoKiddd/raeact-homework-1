@@ -82,17 +82,19 @@ const tryingSomething = stringsArray.reduce((total, val, i, arr) => {
 
 
   //ratomgac es masivi carielia problema memgoni valueshia magram ver gavige
-  let checkIf_Repetition_Exist = arr.filter((item) => {
-    item === val;
-  });
+  let checkIf_Repetition_Exist = arr.filter(  item => item === val );
 
   
 
   //tu checkIf_Repetition_Exist.length 1 ze metia nishnavs rom araishi gvaqvs gameoreba
   if (checkIf_Repetition_Exist.length > 1) {
-    return checkIf_Repetition_Exist[1]
-      ? (total.checkIf_Repetition_Exist[1] = checkIf_Repetition_Exist.length)
-      : total;
+    //davibeni magarad   -_-
+    let objKey  = checkIf_Repetition_Exist[0]
+    let obj={
+     objKey: checkIf_Repetition_Exist.length
+    }
+    return total = {...total, ...obj}
+    
   }
   return total;
   //ragacas arasworad vaketeb magram ver vxvdebi

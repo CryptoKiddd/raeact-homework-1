@@ -34,7 +34,7 @@ let stringsArray = [
   "bros",
 ];
 
-// aq komentars ra azri aqvs if else un vtargmno :)
+// ragaca dzalian hardcodedia mara sxvanairad ar gamomivida
 
 let reducedDreams = stringsArray.reduce(
   (total, current) => {
@@ -122,4 +122,4 @@ addasync()
 
 
 
-  //memgoni sworad gamovida ertaderti classhi meechveba....
+  //meore amocana ar momwons ubralod dro ar maqvs ;(   ....

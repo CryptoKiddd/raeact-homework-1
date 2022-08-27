@@ -14,8 +14,11 @@ console.log(positives);
 const sumOfPositives = positives.reduce((total, element) => {
   return total + element;
 });
+
+
+
 console.log(sumOfPositives, "line17 - dadebiti rixevbis jami");
-//yvelaferma kargad chaira :)
+//status(200).json(ok) :)
 
 
 
@@ -101,6 +104,8 @@ const tryingSomething = stringsArray.reduce((total, val, i, arr) => {
 }, {});
 console.log(tryingSomething, "problem");
 
+//status(500).json(error) :)
+
 //js class amocana====================================================
 
 class Car {
@@ -142,6 +147,7 @@ car.accelerate(10);
 console.log(car.status());
 car.brake(10);
 console.log(car.status());
+//status(200).json(ok) :)
 
 // async js amocana=============================================
 const addasync = (x = 0, y = 0) => {
@@ -163,4 +169,4 @@ addasync()
   .then((value) => console.log(value))
   .catch((err) => console.log(err));
 
-//memgoni sworad gamovida ertaderti classhi meechveba....
+//status(200).json(ok) :)

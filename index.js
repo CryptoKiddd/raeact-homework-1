@@ -15,14 +15,8 @@ const sumOfPositives = positives.reduce((total, element) => {
   return total + element;
 });
 
-
-
 console.log(sumOfPositives, "line17 - dadebiti rixevbis jami");
 //status(200).json(ok) :)
-
-
-
-
 
 //=========meore amocana============================================
 // cota ocnebebshi wavedi...
@@ -40,7 +34,6 @@ let stringsArray = [
   "become",
   "bros",
 ];
-
 
 //es xerxi cota hardcoded gamovida
 
@@ -78,33 +71,45 @@ const countRepetition = (array, value) => {
 const getRepetitionNum = countRepetition(stringsArray, "will");
 console.log(getRepetitionNum, "---meroe amocana function xerxi  - line 74");
 
-//
-
+// vcdilob jer shevamowmo arayshi saertod tu aris duplikati,  tu aris gafiltruli arais sigrdze iqneba 1 ze meti,
+//am gafiltruli  value iqneba is stringi romelic meordeba da arais sigrdze ramdenjerac
+// da am parametrebs gadavcem reduces totals
 
 const tryingSomething = stringsArray.reduce((total, val, i, arr) => {
-
-
   //ratomgac es masivi carielia problema memgoni valueshia magram ver gavige
-  let checkIf_Repetition_Exist = arr.filter(  item => item === val );
-
-  
+  let checkIf_Repetition_Exist = arr.filter((item) => item === val);
 
   //tu checkIf_Repetition_Exist.length 1 ze metia nishnavs rom araishi gvaqvs gameoreba
   if (checkIf_Repetition_Exist.length > 1) {
     //davibeni magarad   -_-
-    let objKey  = checkIf_Repetition_Exist[0]
-    let obj={
-     objKey: checkIf_Repetition_Exist.length
-    }
-    return total = {...total, ...obj}
-    
+    let objKey = checkIf_Repetition_Exist[0];
+    let obj = {
+      objKey: checkIf_Repetition_Exist.length,
+    };
+    return (total = { ...total, ...obj });
   }
   return total;
   //ragacas arasworad vaketeb magram ver vxvdebi
 }, {});
-console.log(tryingSomething, "problem");
+console.log(tryingSomething, "problem line 105");
 
-//status(500).json(error) :)
+
+
+//ესეც თუ არ გამოვიდა იდეები მეწურება===
+
+const finalTry = stringsArray.reduce((obj, key) => {
+  //tu obieqts ar aqvs is stringi key-t rasac stringsArray-dan vigebt mashin daematos obieqtshi da value qondes 1
+  //tu igive key shexvdeba anu igive stringi mashin 1 it gazardos
+   !obj[key] ? obj[key]=1 : obj[key]++
+   
+  return obj[key];
+}, {});
+console.log(finalTry, "wtfff");
+
+
+
+
+
 
 //js class amocana====================================================
 
